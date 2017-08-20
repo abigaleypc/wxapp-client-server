@@ -1,0 +1,30 @@
+  <view class="page-body">
+    <scroll-view class="msg-list" enable-back-to-top scroll-y="true" scroll-top="{{scrollTop}}">
+      <view wx:for="{{msgList}}" wx:key="$index">
+        <view wx:if="{{item.sender == friendInfo.name}}" class="friend">
+          <view>
+            <image class="avatar" src="{{friendInfo.avatar}}" />
+          </view>
+          <view class="triangle">
+            <view class="b-triangle f-b-triangle"></view>
+            <view class="t-triangle f-t-triangle"></view>
+          </view>
+          <view class="item-msg">{{item.msg}}</view>
+        </view>
+        <view wx:else class="self">
+          <view>
+            <image class="avatar" src="{{userInfo.avatarUrl}}" />
+          </view>
+          <view class="triangle">
+            <view class="b-triangle s-b-triangle"></view>
+            <view class="t-triangle s-t-triangle"></view>
+          </view>
+          <view class="item-msg">{{item.msg}}</view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="msg-input">
+      <input class="send-input" auto-focus bindinput="inputMsg" value="{{inputValue}}" />
+      <button class="send-btn" bindtap="send">发送</button>
+    </view>
+  </view>

@@ -1,0 +1,21 @@
+{
+  "name": "wxapp",
+  "version": "1.0.0",
+  "description": "### client",
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://abigaleypc@bitbucket.org/abigaleypc/wxapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/abigaleypc/wxapp#readme"
+}
